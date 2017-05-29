@@ -1,4 +1,4 @@
-# Polymer App Toolbox - Starter Kit
+# Polymer Starter Kit Plus
 
 [![Build Status](https://travis-ci.org/PolymerElements/polymer-starter-kit.svg?branch=master)](https://travis-ci.org/PolymerElements/polymer-starter-kit)
 
@@ -17,6 +17,12 @@ The PRPL pattern, in a nutshell:
 * **Render** initial route ASAP
 * **Pre-cache** components for remaining routes
 * **Lazy-load** and progressively upgrade next routes on-demand
+
+### New Features :tada:
+
+- Default Polymer 2.0
+- [Gulp](https://github.com/gulpjs/gulp) for automating painful or time-consuming tasks.
+- [Reshape](https://github.com/reshape/reshape) for transforming HTML with JavaScript plugins.
 
 ### Migrating from Polymer Starter Kit v1?
 
