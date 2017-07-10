@@ -38,6 +38,7 @@ The PRPL pattern, in a nutshell:
 - `yarn format:js` using [Prettier](https://github.com/prettier/prettier).
 - `yarn format:json` using [Prettier](https://github.com/prettier/prettier).
 - Run formatters on git staged files using [lint-staged](https://github.com/okonet/lint-staged).
+- [imagemin](https://github.com/imagemin/imagemin) for minify images.
 
 ### TODO
 
