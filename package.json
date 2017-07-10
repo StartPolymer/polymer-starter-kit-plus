@@ -15,6 +15,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.0.1",
     "merge-stream": "^1.0.1",
+    "optipng-bin": "^4.0.0",
     "polymer-build": "^1.6.0",
     "prettier": "^1.5.2",
     "rehype-cli": "^3.0.0"
@@ -41,9 +42,21 @@
     "watch": "gulp watch"
   },
   "lint-staged": {
-    "*.css": ["yarn format:css", "git add"],
-    "*.html": ["yarn format:html", "git add"],
-    "*.js": ["yarn format:js", "git add"],
-    "*.json": ["yarn format:json", "git add"]
+    "*.css": [
+      "yarn format:css",
+      "git add"
+    ],
+    "*.html": [
+      "yarn format:html",
+      "git add"
+    ],
+    "*.js": [
+      "yarn format:js",
+      "git add"
+    ],
+    "*.json": [
+      "yarn format:json",
+      "git add"
+    ]
   }
 }
