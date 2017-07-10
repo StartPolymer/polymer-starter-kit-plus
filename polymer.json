@@ -7,11 +7,7 @@
     "src/my-view3.html",
     "src/my-view404.html"
   ],
-  "sources": [
-    "src/**/*",
-    "images/**/*",
-    "bower.json"
-  ],
+  "sources": ["src/**/*", "images/**/*", "bower.json"],
   "extraDependencies": [
     "manifest.json",
     "bower_components/webcomponentsjs/*.js"
