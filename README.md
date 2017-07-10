@@ -1,6 +1,14 @@
-# Polymer Starter Kit Plus
+# Polymer App Toolbox - Starter Kit Plus
 
-[![Build Status](https://travis-ci.org/PolymerElements/polymer-starter-kit.svg?branch=master)](https://travis-ci.org/PolymerElements/polymer-starter-kit)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/StartPolymer/polymer-starter-kit-plus.svg)](http://isitmaintained.com/project/StartPolymer/polymer-starter-kit-plus "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/StartPolymer/polymer-starter-kit-plus.svg)](http://isitmaintained.com/project/StartPolymer/polymer-starter-kit-plus "Percentage of issues still open")
+[![Build Status](https://travis-ci.org/StartPolymer/polymer-starter-kit-plus.svg?branch=master)](https://travis-ci.org/StartPolymer/polymer-starter-kit-plus)
+[![dependencies Status](https://david-dm.org/StartPolymer/polymer-starter-kit-plus/status.svg)](https://david-dm.org/StartPolymer/polymer-starter-kit-plus)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/StartPolymer/polymer-starter-kit-plus/pulls)
+
+> Up-to-date fork of [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit).
+> Only Polymer 2.0+
 
 This template is a starting point for building apps using a drawer-based
 layout. The layout is provided by `app-layout` elements.
@@ -20,13 +28,25 @@ The PRPL pattern, in a nutshell:
 
 ### New Features :tada:
 
-- Default Polymer 2.0
-- [Gulp](https://github.com/gulpjs/gulp) for automating painful or time-consuming tasks.
+- `yarn build` using [Gulp](https://github.com/gulpjs/gulp) for automating painful or time-consuming tasks.
+- `yarn lint:css` using [Prettier](https://github.com/prettier/prettier) for ensure that all outputted code conforms to a consistent style.
+- `yarn lint:html` using [htmllint](https://github.com/htmllint/htmllint) for HTML5 linting and validating.
+- `yarn lint:js` using [Prettier](https://github.com/prettier/prettier) and [eslint](https://github.com/eslint/eslint) for identifying and reporting on patterns in JavaScript based on [Google JavaScript style guide](https://github.com/google/eslint-config-google).
+- `yarn lint:json` using [Prettier](https://github.com/prettier/prettier).
+- `yarn format:css` using [Prettier](https://github.com/prettier/prettier).
+- `yarn format:html` using [rehype-format](https://github.com/wooorm/rehype-format).
+- `yarn format:js` using [Prettier](https://github.com/prettier/prettier).
+- `yarn format:json` using [Prettier](https://github.com/prettier/prettier).
+- Run formatters on git staged files using [lint-staged](https://github.com/okonet/lint-staged).
+
+### TODO
+
+- [Browsersync](https://github.com/Browsersync/browser-sync) for keeping multiple browsers & devices in sync when building websites.
 - [Reshape](https://github.com/reshape/reshape) for transforming HTML with JavaScript plugins.
-
-### Migrating from Polymer Starter Kit v1?
-
-[Check out our blog post that covers what's changed in PSK2 and how to migrate!](https://www.polymer-project.org/1.0/blog/2016-08-18-polymer-starter-kit-or-polymer-cli.html)
+- [JSON5](https://github.com/json5/json5) for humans.
+- [gulp-rev-all](https://github.com/smysnk/gulp-rev-all) for static asset revisioning with dependency considerations, appends content hash to each filename, re-writes references.
+- [Lighthouse](https://github.com/GoogleChrome/lighthouse) for auditing, performance metrics, and best practices.
+- and other [issues](https://github.com/StartPolymer/polymer-starter-kit-plus/issues) ...
 
 ### Quickstart
 
@@ -45,17 +65,17 @@ We've recorded a Polycast to get you up and running with PSK2 fast!
 First, install [Polymer CLI](https://github.com/Polymer/polymer-cli) using
 [npm](https://www.npmjs.com) (we assume you have pre-installed [node.js](https://nodejs.org)).
 
-    npm install -g polymer-cli
+    yarn global add polymer-cli
 
-Second, install [Bower](https://bower.io/) using [npm](https://www.npmjs.com)
+Then, install `generator-polymer-init-starter-kit-plus`.
 
-    npm install -g bower
+    yarn global add generator-polymer-init-starter-kit-plus
 
 ##### Initialize project from template
 
     mkdir my-app
     cd my-app
-    polymer init starter-kit
+    polymer init starter-kit-plus
 
 ### Start the development server
 
