@@ -3,7 +3,7 @@
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/StartPolymer/polymer-starter-kit-plus.svg)](http://isitmaintained.com/project/StartPolymer/polymer-starter-kit-plus "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/StartPolymer/polymer-starter-kit-plus.svg)](http://isitmaintained.com/project/StartPolymer/polymer-starter-kit-plus "Percentage of issues still open")
 [![Build Status](https://travis-ci.org/StartPolymer/polymer-starter-kit-plus.svg?branch=master)](https://travis-ci.org/StartPolymer/polymer-starter-kit-plus)
-[![dependencies Status](https://david-dm.org/StartPolymer/polymer-starter-kit-plus/status.svg)](https://david-dm.org/StartPolymer/polymer-starter-kit-plus)
+[![devDependencies Status](https://david-dm.org/StartPolymer/polymer-starter-kit-plus/dev-status.svg)](https://david-dm.org/StartPolymer/polymer-starter-kit-plus?type=dev)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/StartPolymer/polymer-starter-kit-plus/pulls)
 
