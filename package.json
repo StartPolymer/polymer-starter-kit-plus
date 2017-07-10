@@ -34,7 +34,7 @@
     "lint:polymer": "polymer lint",
     "test": "polymer test",
     "test:integration": "polymer build # Test that psk builds without error with the CLI.",
-    "postinstall": "bower install",
+    "postinstall": "polymer install",
     "precommit": "lint-staged",
     "serve": "polymer serve",
     "serve:all": "polymer serve -H 0.0.0.0 # Serve on all IPv4 addresses on the local machine.",
