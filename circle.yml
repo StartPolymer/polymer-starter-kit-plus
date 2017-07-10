@@ -1,0 +1,17 @@
+machine:
+  node:
+    version:
+      6
+
+dependencies:
+  pre:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
+  cache_directories:
+    - ~/.yarn-cache
+  override:
+    - yarn
+
+test:
+  override:
+    - node -v
+    - yarn lint
