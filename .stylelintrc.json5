@@ -1,0 +1,7 @@
+{
+  'extends': ['stylelint-config-standard'],
+  'processors': ['stylelint-processor-html'],
+  'rules': {
+    'no-empty-source': null // For ignore stylelint-processor-html warnings whenever a file does not contain any matches for regular expression.
+  }
+}
