@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/StartPolymer/polymer-starter-kit-plus.svg?branch=master)](https://travis-ci.org/StartPolymer/polymer-starter-kit-plus)
 [![devDependencies Status](https://david-dm.org/StartPolymer/polymer-starter-kit-plus/dev-status.svg)](https://david-dm.org/StartPolymer/polymer-starter-kit-plus?type=dev)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/StartPolymer/polymer-starter-kit-plus/pulls)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://help.github.com/articles/about-pull-requests/)
 
 > Up-to-date fork of [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit).
 > Only Polymer 2.0+
@@ -28,23 +28,23 @@ The PRPL pattern, in a nutshell:
 
 ### New Features :tada:
 
-- `yarn build` using [Gulp](https://github.com/gulpjs/gulp) for automating painful or time-consuming tasks.
-- `yarn lint:css` using [Prettier](https://github.com/prettier/prettier) for ensure that all outputted code conforms to a consistent style.
-- `yarn lint:html` using [htmllint](https://github.com/htmllint/htmllint) for HTML5 linting and validating.
-- `yarn lint:js` using [Prettier](https://github.com/prettier/prettier) and [eslint](https://github.com/eslint/eslint) for identifying and reporting on patterns in JavaScript based on [Google JavaScript style guide](https://github.com/google/eslint-config-google).
-- `yarn lint:json` using [Prettier](https://github.com/prettier/prettier).
-- `yarn format:css` using [Prettier](https://github.com/prettier/prettier).
-- `yarn format:html` using [rehype-format](https://github.com/wooorm/rehype-format).
-- `yarn format:js` using [Prettier](https://github.com/prettier/prettier).
+- `yarn build` using [Polymer Build](https://github.com/Polymer/polymer-build) and [Gulp](https://github.com/gulpjs/gulp).
+- `yarn format:css` using [js-beautify](https://github.com/beautify-web/js-beautify).
+- `yarn format:html` using [js-beautify](https://github.com/beautify-web/js-beautify).
+- `yarn format:js` using [eslint](https://github.com/eslint/eslint), [Prettier](https://github.com/prettier/prettier) and [eslint-config-google](https://github.com/google/eslint-config-google).
 - `yarn format:json` using [Prettier](https://github.com/prettier/prettier).
-- Run formatters on git staged files using [lint-staged](https://github.com/okonet/lint-staged).
-- [imagemin](https://github.com/imagemin/imagemin) for minify images.
+- `yarn json5` for convert [JSON5](https://github.com/json5/json5) files to strict JSON.
+- `yarn lint:css` using [stylelint](https://github.com/stylelint/stylelint) and [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard).
+- `yarn lint:html` using [htmllint](https://github.com/htmllint/htmllint).
+- `yarn lint:js` using [eslint](https://github.com/eslint/eslint), [Prettier](https://github.com/prettier/prettier) and [eslint-config-google](https://github.com/google/eslint-config-google).
+- `yarn lint:json` using [Prettier](https://github.com/prettier/prettier).
+- `yarn min:img` for minify PNG, JPEG, GIF and SVG images and convert to WebP format using [imagemin](https://github.com/imagemin/imagemin) and [imagemin-webp](https://github.com/imagemin/imagemin-webp).
+- Run linters and formatters on git staged files using [lint-staged](https://github.com/okonet/lint-staged).
 
 ### TODO
 
 - [Browsersync](https://github.com/Browsersync/browser-sync) for keeping multiple browsers & devices in sync when building websites.
 - [Reshape](https://github.com/reshape/reshape) for transforming HTML with JavaScript plugins.
-- [JSON5](https://github.com/json5/json5) for humans.
 - [gulp-rev-all](https://github.com/smysnk/gulp-rev-all) for static asset revisioning with dependency considerations, appends content hash to each filename, re-writes references.
 - [Lighthouse](https://github.com/GoogleChrome/lighthouse) for auditing, performance metrics, and best practices.
 - and other [issues](https://github.com/StartPolymer/polymer-starter-kit-plus/issues) ...
