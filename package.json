@@ -9,53 +9,62 @@
     "eslint-plugin-html": "^3.0.0",
     "eslint-plugin-prettier": "^2.1.2",
     "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-exclude-gitignore": "^1.1.1",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.3.0",
+    "gulp-json5-to-json": "^0.2.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-webp": "^2.3.0",
     "htmllint-cli": "^0.0.6",
     "husky": "^0.14.3",
+    "imagemin-webp": "^4.0.0",
+    "js-beautify": "^1.6.14",
     "lint-staged": "^4.0.1",
     "merge-stream": "^1.0.1",
     "optipng-bin": "^4.0.0",
     "polymer-build": "^1.6.0",
     "prettier": "^1.5.2",
-    "rehype-cli": "^3.0.0"
+    "stylelint": "^7.13.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-processor-html": "^1.0.0"
   },
   "scripts": {
     "build": "gulp build",
     "format": "yarn format:css && yarn format:html && yarn format:js && yarn format:json",
-    "format:css": "prettier \"!(bower_components)/**/*.{css,html}\" \"*.{css,html}\" --parser postcss --single-quote --write",
-    "format:html": "rehype . -o --ignore-path .gitignore",
+    "format:css": "js-beautify *.html **/*.html --css -r --config .jsbeautifyrc.json",
+    "format:css2": "stylelint \"**/*.{css,html}\" --config .stylelintrc.json --fix # Waiting for PR https://github.com/stylelint/stylelint/pull/2596",
+    "format:css3": "prettier \"!(bower_components)/**/*.{css,html}\" \"*.{css,html}\" --parser postcss --single-quote --print-width 120 --write",
+    "format:html": "js-beautify *.html **/*.html --html -r --config .jsbeautifyrc.json",
     "format:js": "eslint . --ext js,html --ignore-path .gitignore --fix",
-    "format:json": "prettier \"!(bower_components)/**/*.json\" \"*.json\" --parser json --write",
+    "format:json": "prettier \"!(bower_components)/**/*.json\" \"*.json\" --parser json --print-width 120 --write",
+    "json5": "gulp json5 && yarn format:json",
     "lint": "yarn lint:css && yarn lint:html && yarn lint:js && yarn lint:json && yarn lint:polymer",
-    "lint:css": "prettier \"!(bower_components)/**/*.{css,html}\" \"*.{css,html}\" --parser postcss --single-quote --list-different",
-    "lint:html": "htmllint \"**/*.html,!bower_components,!node_modules\" --rc .htmllintrc.json",
+    "lint:css": "stylelint \"**/*.{css,html}\" --config .stylelintrc.json",
+    "lint:html": "htmllint \"!(bower_components|build|node_modules)/**/*.html\" --rc .htmllintrc.json",
     "lint:js": "eslint . --ext js,html --ignore-path .gitignore",
-    "lint:json": "prettier \"!(bower_components)/**/*.json\" \"*.json\" --parser json --list-different",
+    "lint:json": "prettier \"!(bower_components)/**/*.json\" \"*.json\" --parser json --print-width 120 --list-different",
     "lint:polymer": "polymer lint",
+    "min:img": "gulp min:img",
     "test": "polymer test",
     "test:integration": "polymer build # Test that psk builds without error with the CLI.",
     "precommit": "lint-staged",
-    "serve": "polymer serve",
-    "serve:all": "polymer serve -H 0.0.0.0 # Serve on all IPv4 addresses on the local machine.",
+    "serve": "polymer serve --open",
+    "serve:all": "polymer serve --open --hostname 0.0.0.0 # Serve on all IPv4 addresses on the local machine.",
     "watch": "gulp watch"
   },
   "lint-staged": {
-    "*.css": [
-      "yarn format:css",
-      "git add"
-    ],
+    "*.css": ["stylelint --config .stylelintrc.json", "js-beautify --css -r --config .jsbeautifyrc.json", "git add"],
     "*.html": [
-      "yarn format:html",
+      "stylelint --config .stylelintrc.json",
+      "js-beautify --css -r --config .jsbeautifyrc.json",
+      "htmllint --rc .htmllintrc.json",
+      "js-beautify --html -r --config .jsbeautifyrc.json",
+      "eslint --fix",
+      "polymer lint",
       "git add"
     ],
-    "*.js": [
-      "yarn format:js",
-      "git add"
-    ],
-    "*.json": [
-      "yarn format:json",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"],
+    "*.json": ["prettier --parser json --print-width 120 --write", "git add"]
   }
 }
