@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/StartPolymer/polymer-starter-kit-plus.svg?branch=master)](https://travis-ci.org/StartPolymer/polymer-starter-kit-plus)
 [![devDependencies Status](https://david-dm.org/StartPolymer/polymer-starter-kit-plus/dev-status.svg)](https://david-dm.org/StartPolymer/polymer-starter-kit-plus?type=dev)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![BrowserStack](https://img.shields.io/badge/BrowserStack-App%20tested-brightgreen.svg)](https://www.browserstack.com)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://help.github.com/articles/about-pull-requests/)
 
 > Up-to-date fork of [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit).
